@@ -1,6 +1,6 @@
 # Python Dessign Patterns
 
-## Why is it important?
+## Why is this important?
 It is important to know about design patterns in Python (or any programming language) because they provide proven solutions to common programming problems. By following these patterns, developers can create more efficient, maintainable, and scalable code.
 
 Design patterns also facilitate communication among developers. They provide a common vocabulary that developers can use to discuss code and its design. This is particularly important in larger development teams, where multiple developers need to work on the same codebase.
@@ -26,3 +26,14 @@ By using the @property and @setter decorators, we can encapsulate these attribut
 ### Facade
 
 The CheckoutFacade class provides a simplified interface for placing an order. It encapsulates the complexities of the payment, shipping, and order objects behind a single interface. The client can create a CheckoutFacade object and call its place_order method, without worrying about the details of payment, shipping, or order processing.
+
+
+### Adapter
+
+Suppose we have a third-party library that provides functionality to work with data in a specific format, let's say it works with data in a CSV format. Now, let's say we want to use this library in our project, but we work with data in a different format, such as JSON. In this case, we can use the Adapter pattern to make the third-party library work with our data format.
+
+In this example, we have a CSVLibrary class that works with data in CSV format. We also have a JSONAdapter class that works with data in JSON format. The CSVToJSONAdapter class is an adapter class that adapts the CSVLibrary class to work with JSON data.
+
+We create instances of CSVLibrary and CSVToJSONAdapter classes and use them to create instances of JSONAdapter class to work with JSON data. We can then use the get_value() method of the JSONAdapter class to retrieve values from the JSON data.
+
+This is an example of how the Adapter pattern can be used in Python to make two incompatible interfaces work together.
