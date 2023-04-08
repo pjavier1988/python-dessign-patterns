@@ -21,3 +21,8 @@ In the example, the Circle class has a radius attribute that can be accessed and
 Additionally, the diameter attribute is calculated based on the radius attribute, and the area attribute is calculated based on the radius attribute as well.
 
 By using the @property and @setter decorators, we can encapsulate these attributes and provide controlled access to them, while also enforcing constraints and providing additional functionality.
+
+
+### Facade
+
+The CheckoutFacade class provides a simplified interface for placing an order. It encapsulates the complexities of the payment, shipping, and order objects behind a single interface. The client can create a CheckoutFacade object and call its place_order method, without worrying about the details of payment, shipping, or order processing.
