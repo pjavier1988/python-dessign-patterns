@@ -25,7 +25,7 @@ class Circle:
 
     @property
     def area(self):
-        return math.pi * self.radius ** 2
+        return round(math.pi * self.radius ** 2, 4)
 
 
 if __name__ == "__main__":

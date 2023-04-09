@@ -37,3 +37,9 @@ In this example, we have a CSVLibrary class that works with data in CSV format. 
 We create instances of CSVLibrary and CSVToJSONAdapter classes and use them to create instances of JSONAdapter class to work with JSON data. We can then use the get_value() method of the JSONAdapter class to retrieve values from the JSON data.
 
 This is an example of how the Adapter pattern can be used in Python to make two incompatible interfaces work together.
+
+
+### Strategy
+Suppose you are building an e-commerce application, and you need to implement a payment system that can accept payments from different payment gateways (e.g., PayPal, Stripe, etc.). Each payment gateway has its own API, and the implementation details of each gateway are different. However, from the perspective of the application, all payment gateways should be interchangeable.
+
+With this setup, you can easily switch between payment gateways by passing a different gateway object to the PaymentProcessor constructor.
