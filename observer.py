@@ -26,14 +26,26 @@ class EmailSubscriber(Subscriber):
     def update(self, article_title, article_content):
         print("Breaking news: %s" % article_title)
         print(article_content)
-        print(f"Published by {self.email}")
+        print(f"Email received by {self.email}")
+
+
+class SMSSuscriber(Subscriber):
+    def __init__(self, number) -> None:
+        super().__init__()
+        self.number = number
+
+    def update(self, article_title, article_content):
+        print("Breaking news: %s" % article_title)
+        print(article_content)
+        print(f"SMS received by {self.number}")
 
 
 if __name__ == "__main__":
     publisher = NewsPublisher()
     suscriber = EmailSubscriber("mail@mail.com")
-
+    suscriber2 = EmailSubscriber("+123454334")
     publisher.register(suscriber)
+    publisher.register(suscriber2)
     publisher.publish("New article", "First article published by suscriber")
 
 

@@ -1,3 +1,6 @@
+[![unittest](https://img.shields.io/github/actions/workflow/status/icon-project/icon-sdk-python/iconsdk-workflow.yml?branch=master&label=unittest&logo=github)](https://github.com/pjavier1988/python-dessign-patterns/issues?q=is%3Aissue+is%3Aclosed)
+[![PyPI - Python](https://img.shields.io/pypi/pyversions/iconsdk?logo=pypi)](https://github.com/pjavier1988/python-dessign-patterns)
+
 # Python Dessign Patterns
 
 ## Why is this important?
@@ -43,3 +46,54 @@ This is an example of how the Adapter pattern can be used in Python to make two 
 Suppose you are building an e-commerce application, and you need to implement a payment system that can accept payments from different payment gateways (e.g., PayPal, Stripe, etc.). Each payment gateway has its own API, and the implementation details of each gateway are different. However, from the perspective of the application, all payment gateways should be interchangeable.
 
 With this setup, you can easily switch between payment gateways by passing a different gateway object to the PaymentProcessor constructor.
+
+
+### Observer
+
+For this example, let's say we have a news publisher that sends out breaking news to all its subscribers. When a new article is published, all the subscribers should receive a notification with the title and content of the article. We can implement this using the Observer pattern.
+When a new article is published, all subscribers will receive a notification with the title and content of the article.
+
+## Methodology and instructions on how to run the program locally
+
+To run the program locally, follow these steps:
+1. Clone the repo
+   ```sh
+   git clone https://github.com/pjavier1988/python-dessign-patterns.git
+   ```
+2. Open a terminal and navigate to the root directory of the project.
+   ```sh
+   cd /your/directory/python-design-patterns
+   ```
+3. Create a virtual environment using the following command:
+   ```sh
+    python3 -m venv venv
+   ```
+4. Activate the virtual environment by running the command:
+   ```sh
+    source venv/bin/activate (on macOS/Linux)
+    or
+    venv/Scripts/activate (on Windows)
+   ```
+5. To install the dependencies located in requirements.txt:
+   ```sh
+    pip3 install -r requirements.txt
+   ```
+
+6. Run the program using the command and the desired module, e.g:
+   ```sh
+    python3 src/decorator.py
+   ```
+
+## Testing
+This project uses TDD.
+For the testing it's necessary to install dependencies. See step 5 in the previous section. After that you must use the following command:
+```sh
+pytest -s
+```
+This will run all the tests in the project and provide verbose output.
+
+If you want to run Code Coverage, you can use:
+   ```sh
+$ pytest --cov=.
+```
+where the dot (.) denotes where are located the modules to analyze.
